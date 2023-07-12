@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:therapeasy/access.dart';
 import 'package:therapeasy/firstlanding.dart';
 
-void main() {
+
+void main() async {
   runApp(const MyApp());
+  DbComms.DBaccess();
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Therapeasy',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
