@@ -6,6 +6,16 @@ class MedHomePage extends StatefulWidget {
 }
 
 class _MedHPState extends State<MedHomePage> {
+  late String go;
+  late bool pushpage=false;
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +32,9 @@ class _MedHPState extends State<MedHomePage> {
                       fontSize: 40,
                       fontFamily: 'VeganStyle'))),
           ElevatedButton(
-            onPressed: () async {
+            onPressed: () {
               DbComms.logout();
-              await Navigator.of(context).popAndPushNamed('/loginPage');
+              Future.delayed(Duration.zero, () {Navigator.pushNamedAndRemoveUntil(context, '/loginPage', (route) =>route.isFirst);});
             },
             child: const Text('sloggati'),
           )

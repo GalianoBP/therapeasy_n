@@ -8,6 +8,12 @@ class PatHomePage extends StatefulWidget {
 }
 
 class _PatHPState extends State<PatHomePage> {
+  late bool pushpage=false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +32,7 @@ class _PatHPState extends State<PatHomePage> {
           ElevatedButton(
             onPressed: () {
               DbComms.logout();
-              Navigator.pop;
+              Future.delayed(Duration.zero, () {Navigator.pushNamedAndRemoveUntil(context, '/loginPage', (route) =>route.isFirst);});
             },
             child: Text('sloggati'),
           )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/access.dart';
 
@@ -11,6 +12,13 @@ class _LoginState extends State<loginPage> {
   final TextEditingController name = TextEditingController();
   final TextEditingController psw = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  late String go;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () { Navigator.pushNamedAndRemoveUntil(context, go, (route) =>route.isFirst);});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,9 +124,9 @@ class _LoginState extends State<loginPage> {
                                         content:
                                         Text('Benvenuto')
                                   ));
-                                  String go = await DbComms.routeToGo();
+                                  go = await DbComms.routeToGo();
                                   print(go);
-                                  Navigator.pushNamed(context, go);
+                                  Future.delayed(Duration.zero, () { Navigator.pushNamedAndRemoveUntil(context, go, (route) =>route.isFirst);});
                                 }
                                 else{
                                   ScaffoldMessenger.of(context).showSnackBar(

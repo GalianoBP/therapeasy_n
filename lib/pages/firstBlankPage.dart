@@ -23,8 +23,8 @@ class _BlankPageState extends State<FirstBlankPage> {
       return;
     }
     (DbComms.retrieveSession())
-        ? Navigator.pushReplacementNamed(context,'/medHomePage')
-        : Navigator.pushReplacementNamed(context, '/loginPage');
+        ? Future.delayed(Duration.zero, () {Navigator.pushReplacementNamed(context,'/medHomePage');})
+        : Future.delayed(Duration.zero, () {Navigator.pushReplacementNamed(context, '/loginPage');});
   }
 
   @override
