@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Paolo\StudioProjects\Therapeasy\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin_c_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Paolo\StudioProjects\Therapeasy\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Paolo\StudioProjects\Therapeasy\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\include\app_links\app_links_plugin_c_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Paolo\StudioProjects\Therapeasy\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\app_links_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Paolo\StudioProjects\Therapeasy\windows\flutter\ephemeral\.plugin_symlinks\app_links\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6FD30B54-A24C-3941-BE4A-810A460F6625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{08B5AEEE-428F-3A7F-9C7F-76AC1C376BE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

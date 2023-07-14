@@ -1,3 +1,5 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -43,12 +45,12 @@ class DbComms {
   }
 
   static Future<String> routeToGo() async {
-    String a;
-    final doc = supabase.from('doctors').select('user, doc_id').eq('user', user?.id);//await supabase.rpc('user_type', params: {'idparameter' : user?.id});
-    final paz = supabase.from('patients').select('user, pat_id').eq('user', user?.id);
-    print(doc.toString());
-    print(user?.id);
-    print('numero=$num');
+    final doc = await supabase.from('doctors').select('user, doc_id').eq('user', user?.id);
+    final num= await supabase.rpc('user_type', params: {'idparameter' : user?.id});
+    var paz = await supabase.from('patients').select('user, pat_id').eq('user', user?.id);
+    print(doc);
+    print(paz);
+    print(num);
     switch (num) {
       case 1:
         return '/medHomePage';

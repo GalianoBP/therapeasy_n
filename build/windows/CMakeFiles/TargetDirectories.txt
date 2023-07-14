@@ -1,0 +1,16 @@
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/CMakeFiles/ALL_BUILD.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/flutter/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/CMakeFiles/therapeasy.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/CMakeFiles/ALL_BUILD.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/app_links_plugin.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/ALL_BUILD.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/url_launcher_windows_plugin.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/ALL_BUILD.dir
