@@ -1,36 +1,64 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-class DbComms{
+class DbComms {
   static final supabase = Supabase.instance.client;
-  static late final Session? session;
-  static late final User? user;
+  static late Session? session;
+  static late User? user;
 
-  static void DBaccess() async{
+  static Future<void> dbAccess() async {
     await Supabase.initialize(
       url: 'https://hrpnbmvshkvpopoqprhd.supabase.co',
-      anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhycG5ibXZzaGt2cG9wb3FwcmhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg2NjkyNzcsImV4cCI6MjAwNDI0NTI3N30.bHDd-lPzAnQkTNAdK_yedmlPfD3W53G-0V-Eymor3w8',
+      anonKey:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhycG5ibXZzaGt2cG9wb3FwcmhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg2NjkyNzcsImV4cCI6MjAwNDI0NTI3N30.bHDd-lPzAnQkTNAdK_yedmlPfD3W53G-0V-Eymor3w8',
     );
   }
 
-  static Future<bool> userAccess(name, psw) async{
-    try{
-    final AuthResponse res = await DbComms.supabase.auth.signInWithPassword(
-      email: name.text,
-      password: psw.text,
-    );
-    session = res.session;
-    user = res.user;
-    return true;
-    } on AuthException
-    {
+  static Future<bool> userAccess(name, psw) async {
+    try {
+      final AuthResponse res = await DbComms.supabase.auth.signInWithPassword(
+        email: name.text,
+        password: psw.text,
+      );
+      session = res.session;
+      user = res.user;
+      return true;
+    } on Exception {
       return false;
     }
-
   }
-}
 
-class _CustomException implements Exception {
-  String cause;
-  _CustomException(this.cause);
+  static bool retrieveSession() {
+    session = supabase.auth.currentSession;
+    user = DbComms.supabase.auth.currentUser;
+    if (!(DbComms.session == null)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  static void logout() async {
+    await supabase.auth.signOut();
+  }
+
+  static Future<String> routeToGo() async {
+    String a;
+    final doc = supabase.from('doctors').select('user, doc_id').eq('user', user?.id);//await supabase.rpc('user_type', params: {'idparameter' : user?.id});
+    final paz = supabase.from('patients').select('user, pat_id').eq('user', user?.id);
+    print(doc.toString());
+    print(user?.id);
+    print('numero=$num');
+    switch (num) {
+      case 1:
+        return '/medHomePage';
+        break;
+      case 2:
+        return '/patHomePage';
+        break;
+      default:
+        return '/errorpage';
+        break;
+    }
+  }
 }
