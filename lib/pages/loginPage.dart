@@ -17,7 +17,7 @@ class _LoginState extends State<loginPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration.zero, () { Navigator.pushNamedAndRemoveUntil(context, go, (route) =>route.isFirst);});
+    //, (route) => false);});
   }
 
   @override
@@ -125,8 +125,7 @@ class _LoginState extends State<loginPage> {
                                         Text('Benvenuto')
                                   ));
                                   go = await DbComms.routeToGo();
-                                  print(go);
-                                  Future.delayed(Duration.zero, () { Navigator.pushNamedAndRemoveUntil(context, go, (route) =>route.isFirst);});
+                                  Future.delayed(Duration.zero, () { Navigator.pushNamedAndRemoveUntil(context, go, (route) =>false);});
                                 }
                                 else{
                                   ScaffoldMessenger.of(context).showSnackBar(

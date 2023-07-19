@@ -1,11 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:therapeasy/Appuser.dart';
 
 class DbComms {
   static final supabase = Supabase.instance.client;
   static late Session? session;
   static late User? user;
-
+  static late int id;
   static Future<void> dbAccess() async {
     await Supabase.initialize(
       url: 'https://hrpnbmvshkvpopoqprhd.supabase.co',
@@ -43,17 +46,21 @@ class DbComms {
   }
 
   static Future<String> routeToGo() async {
-    final doc = await supabase.from('doctors').select('user, doc_id').eq('user', user?.id);
+    List<dynamic> doc = await supabase.from('doctors').select('doc_id, name, surname').eq('user', user?.id);
     final num= await supabase.rpc('user_type', params: {'idparameter' : user?.id});
-    var paz = await supabase.from('patients').select('user, pat_id').eq('user', user?.id);
-    print(doc);
-    print(paz);
+    List<dynamic> paz = await supabase.from('patients').select('pat_id, name, surname').eq('user', user?.id);
+    Map<String,dynamic> utente;
     print(num);
     switch (num) {
       case 1:
+        utente =doc.first as Map<String,dynamic>;
+        Appuser(utente,1);
         return '/medHomePage';
         break;
       case 2:
+        utente =paz.first as Map<String,dynamic>;
+        Appuser(utente,2);
+        await Appuser.therupdate();
         return '/patHomePage';
         break;
       default:

@@ -4,8 +4,11 @@ C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/app_links_pl
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/url_launcher_windows_plugin.dll
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/medicine_logo.png
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/pat_logo.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/Med_icons.ttf
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/fonts/GothamLight.ttf
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/fonts/GroupeMedium.ttf
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/fonts/VeganStyle.ttf

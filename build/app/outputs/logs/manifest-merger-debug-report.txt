@@ -27,7 +27,7 @@ MERGED from [:path_provider_android] C:\Users\Paolo\StudioProjects\Therapeasy\bu
 MERGED from [:webview_flutter_android] C:\Users\Paolo\StudioProjects\Therapeasy\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Paolo\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Paolo\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.browser:browser:1.2.0] C:\Users\Paolo\.gradle\caches\transforms-3\004589e8c0726d6ad414b3534b34ee13\transformed\browser-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\Paolo\.gradle\caches\transforms-3\d12883dde0390e08dd2a1192741cec1b\transformed\browser-1.5.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.webkit:webkit:1.7.0] C:\Users\Paolo\.gradle\caches\transforms-3\26053599e8c0dac0e11dd421905435f3\transformed\webkit-1.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Paolo\.gradle\caches\transforms-3\75f94412898c7559d34d7edbbeaeb394\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Paolo\.gradle\caches\transforms-3\83543b509ea72d197642ff197da2edd7\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -83,8 +83,8 @@ MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Paolo\.gradle\ca
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Paolo\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Paolo\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Paolo\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.2.0] C:\Users\Paolo\.gradle\caches\transforms-3\004589e8c0726d6ad414b3534b34ee13\transformed\browser-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.2.0] C:\Users\Paolo\.gradle\caches\transforms-3\004589e8c0726d6ad414b3534b34ee13\transformed\browser-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\Paolo\.gradle\caches\transforms-3\d12883dde0390e08dd2a1192741cec1b\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] C:\Users\Paolo\.gradle\caches\transforms-3\d12883dde0390e08dd2a1192741cec1b\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.webkit:webkit:1.7.0] C:\Users\Paolo\.gradle\caches\transforms-3\26053599e8c0dac0e11dd421905435f3\transformed\webkit-1.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.webkit:webkit:1.7.0] C:\Users\Paolo\.gradle\caches\transforms-3\26053599e8c0dac0e11dd421905435f3\transformed\webkit-1.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Paolo\.gradle\caches\transforms-3\75f94412898c7559d34d7edbbeaeb394\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41

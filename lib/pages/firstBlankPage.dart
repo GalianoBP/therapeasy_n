@@ -23,8 +23,8 @@ class _BlankPageState extends State<FirstBlankPage> {
       return;
     }
     (DbComms.retrieveSession())
-        ? Future.delayed(Duration.zero, () {Navigator.pushReplacementNamed(context,'/medHomePage');})
-        : Future.delayed(Duration.zero, () {Navigator.pushReplacementNamed(context, '/loginPage');});
+        ? Future.delayed(Duration.zero, () async { Navigator.pushNamedAndRemoveUntil(context, await DbComms.routeToGo(), (route) =>false);})
+        : Future.delayed(Duration.zero, () {Navigator.pushNamedAndRemoveUntil(context, '/loginPage', (route) =>false);});
   }
 
   @override

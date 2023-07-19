@@ -61,8 +61,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - assets/images/pat_logo.png
+     - assets/images/medicine_logo.png
+     - assets/images/ther_image.png
+     - assets/images/plan_image.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -88,6 +91,10 @@ flutter:
     - family: VeganStyle
       fonts:
         - asset: fonts/VeganStyle.ttf
+
+    - family: Gotham
+      fonts:
+        - asset: fonts/GothamLight.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
