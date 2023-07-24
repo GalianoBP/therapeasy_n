@@ -14,6 +14,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "awesome_dialog",
+      "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_dialog-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -102,6 +108,12 @@
       "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "graphs",
+      "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "hive",
@@ -246,6 +258,18 @@
       "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "rive",
+      "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.11.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "rive_common",
+      "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive_common-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "rxdart",
@@ -494,7 +518,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-07-19T17:01:58.618986Z",
+  "generated": "2023-07-22T06:33:45.767321Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }

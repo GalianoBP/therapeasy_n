@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/access.dart';
 
 class loginPage extends StatefulWidget {
@@ -16,6 +14,7 @@ class _LoginState extends State<loginPage> {
 
   @override
   void initState() {
+    DbComms.supabase.removeAllChannels();
     super.initState();
     //, (route) => false);});
   }

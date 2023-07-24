@@ -6,6 +6,10 @@ async
 2.18
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib/
+awesome_dialog
+2.12
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_dialog-3.1.0/
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_dialog-3.1.0/lib/
 boolean_selector
 2.17
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/
@@ -54,6 +58,10 @@ gotrue
 2.17
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-1.11.0/
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-1.11.0/lib/
+graphs
+2.18
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.1/
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.1/lib/
 hive
 2.12
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/hive-2.2.3/
@@ -150,6 +158,14 @@ retry
 3.0
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2/
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2/lib/
+rive
+2.14
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.11.5/
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive-0.11.5/lib/
+rive_common
+2.14
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive_common-0.2.2/
+file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rive_common-0.2.2/lib/
 rxdart
 2.12
 file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.27.7/

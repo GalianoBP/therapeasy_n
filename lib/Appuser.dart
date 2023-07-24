@@ -1,4 +1,3 @@
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/access.dart';
 
 class Appuser {
@@ -37,7 +36,7 @@ class Appuser {
     }
   }
 
-  _medupdate() {
+  _medupdate() async {
     DbComms.supabase
         .from('ther_plan')
         .stream(primaryKey: ['plan_id'])
@@ -48,6 +47,7 @@ class Appuser {
           for (var elem in data) {
             (elem['state'] == 'wait') ? pending_med.add(elem) : null;
           }
+          print('variazione in ther_plan rilevata, pending length = ${pending_med.length}');
         });
   }
 }
