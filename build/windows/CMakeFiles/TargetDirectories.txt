@@ -11,6 +11,9 @@ C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/CMakeFiles/ALL_BUI
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/app_links_plugin.dir
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/INSTALL.dir
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/CMakeFiles/ALL_BUILD.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/CMakeFiles/rive_common_plugin.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/CMakeFiles/INSTALL.dir
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/CMakeFiles/ALL_BUILD.dir
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/url_launcher_windows_plugin.dir
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/INSTALL.dir
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/CMakeFiles/ALL_BUILD.dir

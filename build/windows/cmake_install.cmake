@@ -49,6 +49,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/cmake_install.cmake")
 endif()
 
@@ -157,7 +162,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/url_launcher_windows_plugin.dll")
+     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/rive_common_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -166,11 +171,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
     endif()
     file(INSTALL DESTINATION "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug" TYPE FILE FILES
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/Debug/app_links_plugin.dll"
+      "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/Debug/rive_common_plugin.dll"
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.dll"
       )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Pp][Rr][Oo][Ff][Ii][Ll][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile/url_launcher_windows_plugin.dll")
+     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile/rive_common_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -179,11 +185,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
     endif()
     file(INSTALL DESTINATION "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Profile" TYPE FILE FILES
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/Profile/app_links_plugin.dll"
+      "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/Profile/rive_common_plugin.dll"
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/Profile/url_launcher_windows_plugin.dll"
       )
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
     list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release/url_launcher_windows_plugin.dll")
+     "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release/app_links_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release/rive_common_plugin.dll;C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release/url_launcher_windows_plugin.dll")
     if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
       message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
     endif()
@@ -192,6 +199,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
     endif()
     file(INSTALL DESTINATION "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Release" TYPE FILE FILES
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/app_links/Release/app_links_plugin.dll"
+      "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/rive_common/Release/rive_common_plugin.dll"
       "C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/plugins/url_launcher_windows/Release/url_launcher_windows_plugin.dll"
       )
   endif()

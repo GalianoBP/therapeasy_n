@@ -3,6 +3,7 @@ import 'package:therapeasy/pages/loginPage.dart';
 import 'package:therapeasy/pages/firstBlankPage.dart';
 import 'package:therapeasy/pages/medhomepage.dart';
 import 'package:therapeasy/pages/pathomepage.dart';
+import 'package:therapeasy/pages/therpage.dart';
 import 'package:therapeasy/pages/therplanpage.dart';
 
 class AppRouter {
@@ -14,6 +15,7 @@ class AppRouter {
       '/medHomePage': (context) => MedHomePage(),
       '/patHomePage': (context) => PatHomePage(),
       '/therplanpage': (context) => TherPlanPage(),
+      '/therpage':(context) => TherPage(),
     };
   }
 }

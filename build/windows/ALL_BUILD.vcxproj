@@ -152,6 +152,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{9175EFB4-FC77-337F-852D-BA5505AD9011}</Project>
       <Name>flutter_wrapper_plugin</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Paolo\StudioProjects\Therapeasy\build\windows\plugins\rive_common\rive_common_plugin.vcxproj">
+      <Project>{5D5CE444-4678-39AB-9469-8F2F13DBAC59}</Project>
+      <Name>rive_common_plugin</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Paolo\StudioProjects\Therapeasy\build\windows\runner\therapeasy.vcxproj">
       <Project>{748DAAA5-A62E-3338-86C3-53C493BDB6FB}</Project>
       <Name>therapeasy</Name>

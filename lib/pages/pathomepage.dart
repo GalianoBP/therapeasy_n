@@ -17,6 +17,7 @@ class _PatHPState extends State<PatHomePage> {
 
   late bool pushpage = false;
   final myChannel = DbComms.supabase.channel('pat_home_channel');
+  final therchannel = DbComms.supabase.channel('pat_home_ther_channel');
 
   /*void medstate() async {
     med=((await DbComms.supabase
@@ -32,17 +33,73 @@ class _PatHPState extends State<PatHomePage> {
     myChannel.on(
       RealtimeListenTypes.postgresChanges,
       ChannelFilter(
-          event: 'UPDATE',
+          event: 'UPDATE', // INSERT, DELETE',
           schema: 'public',
           table: 'ther_plan',
           filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
       (payload, [ref]) {
-        print('rilevata variazione dalla Pathp');
-        setState(() {
-        });
+        print('rilevata variazione sui farmaci da assumere dalla Pathp');
+        setState(() {});
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'INSERT',
+          schema: 'public',
+          table: 'ther_plan',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+      (payload, [ref]) {
+        print('rilevata variazione sui farmaci da assumere dalla Pathp');
+        setState(() {});
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'DELETE',
+          schema: 'public',
+          table: 'ther_plan',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+      (payload, [ref]) {
+        print('rilevata variazione sui farmaci da assumere dalla Pathp');
+        setState(() {});
       },
     ).subscribe();
+
     super.initState();
+    therchannel.on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'UPDATE', // INSERT, DELETE',
+          schema: 'public',
+          table: 'therapies',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+      (payload, [ref]) {
+        print('rilevata variazione sulle terapie associate dalla Pathp');
+        setState(() {});
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'INSERT', // INSERT, DELETE',
+          schema: 'public',
+          table: 'therapies',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+      (payload, [ref]) {
+        print('rilevata variazione sulle terapie associate dalla Pathp');
+        setState(() {});
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'DELETE', // INSERT, DELETE',
+          schema: 'public',
+          table: 'therapies',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+      (payload, [ref]) {
+        print('rilevata variazione sulle terapie associate dalla Pathp');
+        setState(() {});
+      },
+    ).subscribe();
   }
 
   @override
@@ -203,63 +260,68 @@ class _PatHPState extends State<PatHomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Card(
-                    // Define the shape of the card
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    // Define how the card's content should be clipped
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    // Define the child widget of the card
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        // Add padding around the row widget
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              // Add an image widget to display an image
-                              Image.asset(
-                                'assets/images/ther_image.png',
-                                height: 100,
-                                width: 100,
-                                fit: BoxFit.cover,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Card(
+                      // Define the shape of the card
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      // Define how the card's content should be clipped
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      // Define the child widget of the card
+                      child: InkWell(
+                        onTap: () async {
+                          Navigator.pushNamed(context, '/therpage');
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            // Add padding around the row widget
+                            Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  // Add an image widget to display an image
+                                  Image.asset(
+                                    'assets/images/ther_image.png',
+                                    height: 100,
+                                    width: 100,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  // Add some spacing between the image and the text
+                                  Container(width: 20),
+                                  // Add an expanded widget to take up the remaining horizontal space
+                                  Flexible(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        // Add some spacing between the top of the card and the title
+                                        Container(height: 5),
+                                        // Add a title widget
+                                        RichText(
+                                            text: const TextSpan(
+                                                text: "Le tue terapie",
+                                                style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        1000, 104, 120, 222),
+                                                    fontSize: 30,
+                                                    fontFamily: 'Gotham'))),
+                                        // Add some spacing between the title and the subtitle
+                                        Container(height: 5),
+                                        // Add a subtitle widget
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              // Add some spacing between the image and the text
-                              Container(width: 20),
-                              // Add an expanded widget to take up the remaining horizontal space
-                              Flexible(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    // Add some spacing between the top of the card and the title
-                                    Container(height: 5),
-                                    // Add a title widget
-                                    RichText(
-                                        text: const TextSpan(
-                                            text: "Le tue terapie",
-                                            style: TextStyle(
-                                                color: Color.fromARGB(
-                                                    1000, 104, 120, 222),
-                                                fontSize: 30,
-                                                fontFamily: 'Gotham'))),
-                                    // Add some spacing between the title and the subtitle
-                                    Container(height: 5),
-                                    // Add a subtitle widget
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
-                ),
+                      ),
+                    )),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Card(

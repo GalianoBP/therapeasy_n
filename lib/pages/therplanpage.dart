@@ -1,6 +1,5 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/Appuser.dart';
 import 'package:therapeasy/access.dart';
@@ -20,11 +19,31 @@ class _TherPlanPage extends State<TherPlanPage> {
     myChannel.on(
       RealtimeListenTypes.postgresChanges,
       ChannelFilter(
-          event: 'UPDATE',
+          event: 'UPDATE',//, INSERT, DELETE',
           schema: 'public',
           table: 'ther_plan',
           filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
       (payload, [ref]) async {
+        await Refresh();
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'INSERT',
+          schema: 'public',
+          table: 'ther_plan',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+          (payload, [ref]) async {
+        await Refresh();
+      },
+    ).on(
+      RealtimeListenTypes.postgresChanges,
+      ChannelFilter(
+          event: 'DELETE',
+          schema: 'public',
+          table: 'ther_plan',
+          filter: 'pat_id_fk=eq.${Appuser.userID.toString()}'),
+          (payload, [ref]) async {
         await Refresh();
       },
     ).subscribe();
@@ -49,7 +68,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                   text: "Therapeasy",
                   style: TextStyle(
                       color: Colors.teal,
-                      fontSize: 40,
+                      fontSize: 35,
                       fontFamily: 'VeganStyle'))),
           actions: [
             IconButton(
@@ -88,7 +107,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                             right: Radius.circular(15),
                             left: Radius.circular(15))),
                     child: Padding(
-                      padding: const EdgeInsets.all(15),
+                      padding: const EdgeInsets.only(top:15, bottom:15, left:15),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: list_element_maker(ther_plan[index])),
@@ -137,7 +156,7 @@ class _TherPlanPage extends State<TherPlanPage> {
     String doc_name = '', doc_surname = '', doc_spec = '';
     return [
       SizedBox(
-        width: MediaQuery.of(context).orientation == Orientation.landscape ? null: 220,
+        width: MediaQuery.of(context).orientation == Orientation.landscape ? null: 179,
           child: Column(children: [
         RichText(
           overflow: TextOverflow.ellipsis,
@@ -156,13 +175,19 @@ class _TherPlanPage extends State<TherPlanPage> {
       Flexible(fit:FlexFit.tight, child:
       Row(
         mainAxisAlignment: MainAxisAlignment.end,
-          children: [new Spacer(),
+          children: [Spacer(),
         IconButton(
           iconSize: 75,
-          onPressed: (elem['state'] == 'wait') ? () {} : null,
-          icon: Icon(Icons.check_circle_outline),
-          padding: EdgeInsets.only(right: 10, left: 10),
+          onPressed: (elem['state'] == 'wait') ? () async {
+           print(await DbComms.supabase
+                .from('ther_plan')
+                .update({ 'state': 'comp'})
+                .eq('plan_id', elem['plan_id']));
+          } : null,
+          icon: const Icon(Icons.check_circle_outline),
+          padding: const EdgeInsets.only(left:10,right: 10),
         ),
+        Padding(padding: EdgeInsets.only(right: 10), child:
         Column(crossAxisAlignment: CrossAxisAlignment.end,mainAxisAlignment: MainAxisAlignment.center, children: [
           IconButton(
               icon: Icon(Icons.medication, size: 30),
@@ -193,7 +218,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                                         color: Colors.teal,
                                         fontSize: 20,
                                         fontFamily: 'Gotham'))),
-                            Expanded(
+                            Flexible(
                               child: RichText(
                                   maxLines: 3,
                                   softWrap: true,
@@ -218,7 +243,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                                         color: Colors.teal,
                                         fontSize: 20,
                                         fontFamily: 'Gotham'))),
-                            Expanded(
+                            Flexible(
                               child: RichText(
                                   maxLines: 3,
                                   softWrap: true,
@@ -243,7 +268,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                                         color: Colors.teal,
                                         fontSize: 20,
                                         fontFamily: 'Gotham'))),
-                            Expanded(
+                            Flexible(
                               child: RichText(
                                   maxLines: 3,
                                   softWrap: true,
@@ -368,7 +393,7 @@ class _TherPlanPage extends State<TherPlanPage> {
                   btnOkOnPress: () {},
                 ).show();
               }),
-        ])
+        ]))
       ])
     )];
   }

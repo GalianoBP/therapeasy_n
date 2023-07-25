@@ -5,7 +5,7 @@ class Appuser {
   static late String name;
   static late String surname;
   static late int role;
-  static late List<dynamic> ther;
+  static late List<Map<String, dynamic>> ther=[];
   static List<Map<String, dynamic>> pending_med = [];
   static late final medrole;
   static late List<dynamic> terapie;
@@ -29,10 +29,18 @@ class Appuser {
     if (role != 2) {
       //pat = await DbComms.supabase.from('therapies').select('doc_id_fk').eq('doc_id_fk', Appuser.userID);
     } else {
-      ther = await DbComms.supabase
+      DbComms.supabase
           .from('therapies')
-          .select('pat_id_fk')
-          .eq('pat_id_fk', Appuser.userID);
+          .stream(primaryKey: ['clin_id'])
+          .eq('pat_id_fk', userID.toString())
+      //.inFilter('state', ['wait', 'ncom', 'comp'])
+          .listen((List<Map<String, dynamic>> data) {
+        ther.clear();
+        for (var elem in data) {
+          ther.add(elem);
+        }
+        print('variazione in Appuser sulle terapie rilevata, ther length = ${ther.length}');
+      });
     }
   }
 
@@ -47,7 +55,7 @@ class Appuser {
           for (var elem in data) {
             (elem['state'] == 'wait') ? pending_med.add(elem) : null;
           }
-          print('variazione in ther_plan rilevata, pending length = ${pending_med.length}');
+          print('variazione in sui piani rilevata in Appuser, pending length = ${pending_med.length}');
         });
   }
 }
