@@ -29,7 +29,7 @@ class Appuser {
     if (role != 2) {
       //pat = await DbComms.supabase.from('therapies').select('doc_id_fk').eq('doc_id_fk', Appuser.userID);
     } else {
-      DbComms.supabase
+      await DbComms.supabase
           .from('therapies')
           .stream(primaryKey: ['clin_id'])
           .eq('pat_id_fk', userID.toString())
@@ -45,7 +45,7 @@ class Appuser {
   }
 
   _medupdate() async {
-    DbComms.supabase
+    await DbComms.supabase
         .from('ther_plan')
         .stream(primaryKey: ['plan_id'])
         .eq('pat_id_fk', userID.toString())

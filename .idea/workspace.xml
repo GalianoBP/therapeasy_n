@@ -9,13 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Commit dopo aver quasi finito pagina &quot;I tuoi piani&quot;. La pagina funziona completamente in termini di visualizzazione, bisogna aggiungere la parte legata agli ok dell'utente quando il farmaco è in wait. Nota personale: fai Commit e Push più spesso">
-      <change afterPath="$PROJECT_DIR$/lib/pages/therpage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
+    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Commit dopo aver finito la pagine sulle terapie">
+      <change afterPath="$PROJECT_DIR$/assets/images/doc_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/med_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/medlistpage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/medpage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/debug_bundle_windows_assets.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/debug_bundle_windows_assets.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/flutter_assets.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/outputs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/debug_android_application.stamp" afterDir="false" />
@@ -23,91 +28,47 @@
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/outputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Therapeasy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Therapeasy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/javac/debug/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/javac/debug/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/local-state/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.list" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/NOTICES" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/install_manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.exp" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.exp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.lib" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/Debug/app_links_plugin.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/app_links/app_links_plugin.dir/Debug/app_links_plugin.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.exp" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.exp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.lib" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.lib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/Debug/url_launcher_windows_plugin.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_laun.7903B678.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_laun.7903B678.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_laun.7903B678.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_laun.7903B678.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_launcher_windows_plugin.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/plugins/url_launcher_windows/url_launcher_windows_plugin.dir/Debug/url_launcher_windows_plugin.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/app_links_plugin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/app_links_plugin.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/url_launcher_windows_plugin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/url_launcher_windows_plugin.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/runner.sln" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/runner.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.exe.recipe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.tlog/rc.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/utils.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/utils.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/win32_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/win32_window.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/therapeasy.sln" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/therapeasy.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.recipe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Appuser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Appuser.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/access.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/access.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/approuter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/approuter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/loginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/loginPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/medhomepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/dochomepage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/pathomepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/pathomepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/therplanpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/therplanpage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/therpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/therpage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,8 +124,8 @@
       <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\lib" />
       <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\assets\images" />
+      <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\lib" />
       <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\assets" />
       <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\pages" />
     </key>
@@ -261,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690199810210</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Commit dopo aver finito la pagine sulle terapie">
+      <created>1690282616447</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690282616447</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +253,8 @@
     <MESSAGE value="Commit con login e transizioni tra pagine funzionanti :)" />
     <MESSAGE value="Commit con Pathomepage dinamica, da aggiungere le rotte dalle cards" />
     <MESSAGE value="Commit dopo aver quasi finito pagina &quot;I tuoi piani&quot;. La pagina funziona completamente in termini di visualizzazione, bisogna aggiungere la parte legata agli ok dell'utente quando il farmaco è in wait. Nota personale: fai Commit e Push più spesso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit dopo aver quasi finito pagina &quot;I tuoi piani&quot;. La pagina funziona completamente in termini di visualizzazione, bisogna aggiungere la parte legata agli ok dell'utente quando il farmaco è in wait. Nota personale: fai Commit e Push più spesso" />
+    <MESSAGE value="Commit dopo aver finito la pagine sulle terapie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit dopo aver finito la pagine sulle terapie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

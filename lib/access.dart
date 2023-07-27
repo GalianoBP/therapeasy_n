@@ -60,7 +60,7 @@ class DbComms {
       case 1:
         utente = doc.first as Map<String, dynamic>;
         Appuser(utente, 1);
-        return '/medHomePage';
+        return '/docHomePage';
       case 2:
         utente = paz.first as Map<String, dynamic>;
         Appuser(utente, 2);

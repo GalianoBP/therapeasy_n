@@ -123,7 +123,7 @@ class _TherPage extends State<TherPage> {
     for (var elem in await DbComms.supabase
         .from('therapies')
         .select('*, doctors(name, surname, med_spec)')
-        //.eq('compiled', false)
+        .eq('compiled', true)
         .eq('pat_id_fk', Appuser.userID) //Appuser.userID)
         .order('start_date, end_date')
         .order('state', ascending: false)) {

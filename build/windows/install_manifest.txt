@@ -5,7 +5,9 @@ C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/rive_common_
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/url_launcher_windows_plugin.dll
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/doc_logo.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/medicine_logo.png
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/med_list.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/pat_logo.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/plan_image.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/ther_image.png
