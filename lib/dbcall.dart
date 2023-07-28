@@ -1,4 +1,3 @@
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/access.dart';
 
 class Dbcall{

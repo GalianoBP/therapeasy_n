@@ -2,6 +2,13 @@
   <library name="Dart Packages" type="DartPackagesLibraryType">
     <properties>
       <option name="packageNameToDirsMap">
+        <entry key="anim_search_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/anim_search_bar-2.0.3/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="app_links">
           <value>
             <list>
@@ -600,6 +607,7 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/anim_search_bar-2.0.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/app_links-3.4.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/awesome_dialog-3.1.0/lib" />
