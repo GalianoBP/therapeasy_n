@@ -1,12 +1,7 @@
-import 'package:anim_search_bar/anim_search_bar.dart';
-import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/Appuser.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/approuter.dart';
-import 'package:therapeasy/icons.dart';
 
 class MedListPage extends StatefulWidget {
   const MedListPage({super.key});
@@ -28,11 +23,10 @@ class _MedListPage extends State<MedListPage> {
           schema: 'public',
           table: 'therapies',
           filter: 'doc_id_fk=eq.${Appuser.userID.toString()}'),
-          (payload, [ref]) async {
+      (payload, [ref]) async {
         //await Refresh();
         print(
-            'rilevato update sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist
-                .length} ');
+            'rilevato update sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist.length} ');
         setState(() {});
       },
     ).on(
@@ -42,11 +36,10 @@ class _MedListPage extends State<MedListPage> {
           schema: 'public',
           table: 'therapies',
           filter: 'doc_id_fk=eq.${Appuser.userID.toString()}'),
-          (payload, [ref]) async {
+      (payload, [ref]) async {
         //await Refresh();
         print(
-            'rilevato insert sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist
-                .length} ');
+            'rilevato insert sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist.length} ');
         setState(() {});
       },
     ).on(
@@ -56,11 +49,10 @@ class _MedListPage extends State<MedListPage> {
           schema: 'public',
           table: 'therapies',
           filter: 'doc_id_fk=eq.${Appuser.userID.toString()}'),
-          (payload, [ref]) async {
+      (payload, [ref]) async {
         //await Refresh();
         print(
-            'rilevato delete sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist
-                .length} ');
+            'rilevato delete sulle medicine dalla medlistpg, medicine attualmente disponibili: ${medlist.length} ');
         setState(() {});
       },
     ).subscribe();
@@ -72,8 +64,8 @@ class _MedListPage extends State<MedListPage> {
     medlist.clear();
     if (filt == '') {
       for (var elem in (await DbComms.supabase.from('medicines').select('*')
-      //.textSearch('name', '')
-      as List<dynamic>)) {
+          //.textSearch('name', '')
+          as List<dynamic>)) {
         medlist.add(elem as Map<String, dynamic>);
       }
     } else {
@@ -118,89 +110,84 @@ class _MedListPage extends State<MedListPage> {
               ),
               body: Container(
                   child: Column(children: <Widget>[
-                    Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              SizedBox(
-                                  width: MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width - 75,
-                                  child: TextField(
-                                    onTap: () {},
-                                    onSubmitted: (String) {
-                                      setState(() {
-                                        filt = src.text;
-                                      });
-                                    },
-                                    controller: src,
-                                    decoration: InputDecoration(
-                                        labelText: "Cerca",
-                                        hintText: "Cerca medicinale",
-                                        prefixIcon: Icon(Icons.search),
-                                        border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25.0)))),
-                                  )),
-                              IconButton(onPressed: () {
+                Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width - 75,
+                              child: TextField(
+                                onTap: () {},
+                                onSubmitted: (String) {
+                                  setState(() {
+                                    filt = src.text;
+                                  });
+                                },
+                                controller: src,
+                                decoration: const InputDecoration(
+                                    labelText: "Cerca",
+                                    hintText: "Cerca medicinale",
+                                    prefixIcon: Icon(Icons.search),
+                                    border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25.0)))),
+                              )),
+                          IconButton(
+                              onPressed: () {
                                 src.clear();
                                 setState(() {});
-                              }, icon: const Icon(Icons.search_off))
-                            ])),
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: medlist.length,
-                        itemBuilder: (context, index) {
-                          return Card(
-                              child: Container(
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                          colors: [
-                                            Colors.greenAccent.shade100,
-                                            Colors.greenAccent.shade200
-                                          ],
-                                          begin: Alignment.topLeft,
-                                          end: Alignment.bottomRight),
-                                      borderRadius: const BorderRadius
-                                          .horizontal(
-                                          right: Radius.circular(15),
-                                          left: Radius.circular(15))),
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 15, bottom: 15, left: 15),
-                                    child: Row(
-                                        mainAxisAlignment: MainAxisAlignment
-                                            .start,
-                                        children: _list_element_maker_therapies(
-                                            medlist[index])),
-                                  )));
-                        },
-                      ),
-                    )
-                  ])));
+                              },
+                              icon: const Icon(Icons.search_off))
+                        ])),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: medlist.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                          child: Container(
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      colors: [
+                                        Colors.greenAccent.shade100,
+                                        Colors.greenAccent.shade200
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight),
+                                  borderRadius: const BorderRadius.horizontal(
+                                      right: Radius.circular(15),
+                                      left: Radius.circular(15))),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 15, bottom: 15, left: 15),
+                                child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: _list_element_maker_medicines(
+                                        medlist[index])),
+                              )));
+                    },
+                  ),
+                )
+              ])));
         });
   }
 
-  List<Widget> _list_element_maker_therapies(Map<String, dynamic> elem) {
+  List<Widget> _list_element_maker_medicines(Map<String, dynamic> elem) {
     String name = (elem['name']);
     String type = (elem['type']);
     String ac_pri = elem['active_principle'];
 
     return [
       SizedBox(
-          width: MediaQuery
-              .of(context)
-              .orientation == Orientation.landscape
+          width: MediaQuery.of(context).orientation == Orientation.landscape
               ? null
-              : MediaQuery
-              .sizeOf(context)
-              .width - 30,
+              : MediaQuery.sizeOf(context).width - 30,
           child: Column(children: [
             RichText(
               overflow: TextOverflow.ellipsis,
               maxLines: 3,
               strutStyle: StrutStyle(fontSize: 40),
+              textAlign: TextAlign.center,
               text: TextSpan(
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -212,18 +199,26 @@ class _MedListPage extends State<MedListPage> {
             Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Principio attivo:',
-                    style: const TextStyle(color: Colors.indigo, fontSize: 28, fontFamily: 'Gotham', fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 28,
+                        fontFamily: 'Gotham',
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     '$ac_pri',
                     style: const TextStyle(fontSize: 28, fontFamily: 'Gotham'),
                   ),
-                  Text(
+                  const Text(
                     'Tipologia:',
                     // ${end_date.hour + 2}:${end_date.minute}',
-                    style: const TextStyle(color: Colors.indigo, fontSize: 28, fontFamily: 'Gotham', fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 28,
+                        fontFamily: 'Gotham',
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     '$type',

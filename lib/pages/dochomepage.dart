@@ -157,7 +157,8 @@ class _DocHPState extends State<DocHomePage> {
                                                       "Ciao, dott. ${Appuser.surname}",
                                                   style: const TextStyle(
                                                       color: Colors.red,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                       fontSize: 25,
                                                       fontFamily: 'Gotham'))),
                                           // Add some spacing between the title and the subtitle
@@ -183,70 +184,142 @@ class _DocHPState extends State<DocHomePage> {
                           ),
                         ),
                       ),
-                          Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Card(
-                                // Define the shape of the card
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                // Define how the card's content should be clipped
-                                clipBehavior: Clip.antiAliasWithSaveLayer,
-                                // Define the child widget of the card
-                                child: InkWell(
-                                  onTap: () async {
-                                    Navigator.pushNamed(context, '/medlistpage');
-                                  },
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      // Add padding around the row widget
-                                      Padding(
-                                        padding: const EdgeInsets.all(15),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: <Widget>[
-                                            // Add an image widget to display an image
-                                            Image.asset(
-                                              'assets/images/med_list.png',
-                                              height: 75,
-                                              width: 75,
-                                              fit: BoxFit.cover,
-                                            ),
-                                            // Add some spacing between the image and the text
-                                            Container(width: 20),
-                                            // Add an expanded widget to take up the remaining horizontal space
-                                            Flexible(
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  // Add some spacing between the top of the card and the title
-                                                  Container(height: 5),
-                                                  // Add a title widget
-                                                  RichText(
-                                                      text: const TextSpan(
-                                                          text: "Lista dei farmaci",
-                                                          style: TextStyle(
-                                                            fontWeight: FontWeight.bold,
-                                                              color: Color.fromARGB(
-                                                                  1000, 1, 82, 90),
-                                                              fontSize: 30,
-                                                              fontFamily: 'Gotham'))),
-                                                  // Add some spacing between the title and the subtitle
-                                                  Container(height: 5),
-                                                  // Add a subtitle widget
-                                                ],
-                                              ),
-                                            ),
-                                          ],
+                      Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Card(
+                            // Define the shape of the card
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            // Define how the card's content should be clipped
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            // Define the child widget of the card
+                            child: InkWell(
+                              onTap: () async {
+                                Navigator.pushNamed(context, '/medlistpage');
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  // Add padding around the row widget
+                                  Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        // Add an image widget to display an image
+                                        Image.asset(
+                                          'assets/images/med_list.png',
+                                          height: 75,
+                                          width: 75,
+                                          fit: BoxFit.cover,
                                         ),
-                                      ),
-                                    ],
+                                        // Add some spacing between the image and the text
+                                        Container(width: 20),
+                                        // Add an expanded widget to take up the remaining horizontal space
+                                        Flexible(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              // Add some spacing between the top of the card and the title
+                                              Container(height: 5),
+                                              // Add a title widget
+                                              RichText(
+                                                  text: const TextSpan(
+                                                      text: "Lista dei farmaci",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: Color.fromARGB(
+                                                              1000, 1, 82, 90),
+                                                          fontSize: 30,
+                                                          fontFamily:
+                                                              'Gotham'))),
+                                              // Add some spacing between the title and the subtitle
+                                              Container(height: 5),
+                                              // Add a subtitle widget
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              )),
+                                ],
+                              ),
+                            ),
+                          )),
+                      Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Card(
+                            // Define the shape of the card
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            // Define how the card's content should be clipped
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            // Define the child widget of the card
+                            child: InkWell(
+                              onTap: () async {
+                                Navigator.pushNamed(context, '/ther_man_page');
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  // Add padding around the row widget
+                                  Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        // Add an image widget to display an image
+                                        Image.asset(
+                                          'assets/images/ther_list.png',
+                                          height: 75,
+                                          width: 75,
+                                          fit: BoxFit.cover,
+                                        ),
+                                        // Add some spacing between the image and the text
+                                        Container(width: 20),
+                                        // Add an expanded widget to take up the remaining horizontal space
+                                        Flexible(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              // Add some spacing between the top of the card and the title
+                                              Container(height: 5),
+                                              // Add a title widget
+                                              RichText(
+                                                  text: const TextSpan(
+                                                      text: "Lista delle terapie",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: Color.fromARGB(
+                                                              1000, 1, 82, 90),
+                                                          fontSize: 30,
+                                                          fontFamily:
+                                                              'Gotham'))),
+                                              // Add some spacing between the title and the subtitle
+                                              Container(height: 5),
+                                              // Add a subtitle widget
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )),
                     ]))
               ]));
         });
