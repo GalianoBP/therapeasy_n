@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/Appuser.dart';
 import 'package:therapeasy/access.dart';
+import 'package:therapeasy/approuter.dart';
 
 class TherManPage extends StatefulWidget {
   const TherManPage({super.key});
@@ -85,9 +88,15 @@ class _TherManPage extends State<TherManPage> {
           .select('*, patients(name,surname)')
           .eq('doc_id_fk', Appuser.userID))) {
         ((elem as Map<String, dynamic>)['compiled'])
-            ? ((elem['patients']['surname'] as String).matchAsPrefix(filt)) != null ? ther_list_compiled.add(elem): null
-            : ((elem['patients']['surname'] as String).matchAsPrefix(filt)) != null ? ther_list_pending.add(elem) : null;
-        }
+            ? ((elem['patients']['surname'] as String).matchAsPrefix(filt)) !=
+                    null
+                ? ther_list_compiled.add(elem)
+                : null
+            : ((elem['patients']['surname'] as String).matchAsPrefix(filt)) !=
+                    null
+                ? ther_list_pending.add(elem)
+                : null;
+      }
       print(
           "SEARCH: $filt Ci sono ${ther_list_pending.length} terapie in attesa di compilazione rilevate da ther_man_pg");
       print(
@@ -124,6 +133,16 @@ class _TherManPage extends State<TherManPage> {
                       },
                       icon: const Icon(Icons.logout)),
                 ],
+              ),
+              floatingActionButton: FloatingActionButton.extended(
+                onPressed: () async {
+                  Navigator.pushNamed(context, '/newtherpage');
+                },
+                backgroundColor: Colors.teal,
+                label: const Row(children: <Widget>[
+                  Icon(Icons.add),
+                  Text('Aggiungi Terapia'),
+                ]),
               ),
               body: Container(
                   child: Column(children: <Widget>[
@@ -179,13 +198,13 @@ class _TherManPage extends State<TherManPage> {
                               fontWeight: FontWeight.bold),
                           textAlign: TextAlign.left,
                         ),
-                      ]),),
+                      ]),
+                ),
                 Expanded(
                   child: ListView.builder(
-                    itemCount:
-                        !(onlync) ?
-                        (ther_list_pending.length + ther_list_compiled.length):
-                        ther_list_pending.length,
+                    itemCount: !(onlync)
+                        ? (ther_list_pending.length + ther_list_compiled.length)
+                        : ther_list_pending.length,
                     itemBuilder: (context, index) {
                       return Card(
                           child: Container(

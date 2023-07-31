@@ -5,6 +5,7 @@ import 'package:therapeasy/pages/loginPage.dart';
 import 'package:therapeasy/pages/firstBlankPage.dart';
 import 'package:therapeasy/pages/dochomepage.dart';
 import 'package:therapeasy/pages/medlistpage.dart';
+import 'package:therapeasy/pages/new_ther_page.dart';
 import 'package:therapeasy/pages/pathomepage.dart';
 import 'package:therapeasy/pages/ther_managament_page.dart';
 import 'package:therapeasy/pages/therpage.dart';
@@ -24,6 +25,7 @@ class AppRouter {
       '/medpage': (context) => MedPage(),
       '/medlistpage': (context) => MedListPage(),
       '/ther_man_page': (context) => TherManPage(),
+      '/newtherpage': (context) => NewTherPage(),
     };
   }
   static Scaffold waitingAnim(BuildContext context){

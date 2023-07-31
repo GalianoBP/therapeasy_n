@@ -9,24 +9,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Commit con pagina delle medicine per il medico fatta. Aggiunta barra di ricerca funzionante con annesso tasto per cancellazione della ricerca.">
-      <change afterPath="$PROJECT_DIR$/assets/images/ther_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/ther_managament_page.dart" afterDir="false" />
+    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Commit con pagina delle terapie del dottore funzionante. Divisione operata tra terapie compilate, resa funzionante barra di ricerca per cognome">
+      <change afterPath="$PROJECT_DIR$/lib/pages/new_ther_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/debug_bundle_windows_assets.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/debug_bundle_windows_assets.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/outputs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/debug_android_application.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/flutter_assets.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/outputs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
@@ -34,10 +39,25 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/flutter_assets/shaders/ink_sparkle.frag" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/shaders/ink_sparkle.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/install_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/approuter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/approuter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/dochomepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/dochomepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/medlistpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/medlistpage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/loginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/loginPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/ther_managament_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ther_managament_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690543132671</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Commit con pagina delle terapie del dottore funzionante. Divisione operata tra terapie compilate, resa funzionante barra di ricerca per cognome">
+      <created>1690567300648</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690567300648</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +267,8 @@
     <MESSAGE value="Commit dopo aver finito la pagine sulle terapie" />
     <MESSAGE value="Commit con pagina dei pazienti sostanzialmente completa, fare modifiche coi FutureBuilder per rendere più carine le transizioni con attesa.&#10;Realizzata Homepage medici e imbastita parte legata ai medicinali, da continuare aggiungendo barra di ricerca funzionale" />
     <MESSAGE value="Commit con pagina delle medicine per il medico fatta. Aggiunta barra di ricerca funzionante con annesso tasto per cancellazione della ricerca." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con pagina delle medicine per il medico fatta. Aggiunta barra di ricerca funzionante con annesso tasto per cancellazione della ricerca." />
+    <MESSAGE value="Commit con pagina delle terapie del dottore funzionante. Divisione operata tra terapie compilate, resa funzionante barra di ricerca per cognome" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con pagina delle terapie del dottore funzionante. Divisione operata tra terapie compilate, resa funzionante barra di ricerca per cognome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

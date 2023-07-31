@@ -11,6 +11,7 @@ C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/pat_logo.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/plan_image.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/ther_image.png
+C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/images/ther_list.png
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/assets/Med_icons.ttf
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 C:/Users/Paolo/StudioProjects/Therapeasy/build/windows/runner/Debug/data/flutter_assets/fonts/GothamLight.ttf
