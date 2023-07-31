@@ -349,6 +349,7 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                     size: 50,
                   )
           ]),
+          ElevatedButton(onPressed: () async {await DbComms.supabase.from('therapies').delete().match({ 'clin_id': elem['clin_id'] });}, child: Text('rimuovi')),
         ]))
   ];
 }
