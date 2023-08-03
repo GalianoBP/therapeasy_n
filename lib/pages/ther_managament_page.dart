@@ -141,7 +141,6 @@ class _TherManPage extends State<TherManPage> {
                 backgroundColor: Colors.teal,
                 label: const Row(children: <Widget>[
                   Icon(Icons.add),
-                  Text('Aggiungi Terapia'),
                 ]),
               ),
               body: Container(
@@ -238,7 +237,7 @@ class _TherManPage extends State<TherManPage> {
                               )));
                     },
                   ),
-                )
+                ),
               ])));
         });
   }
@@ -349,7 +348,44 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                     size: 50,
                   )
           ]),
-          ElevatedButton(onPressed: () async {await DbComms.supabase.from('therapies').delete().match({ 'clin_id': elem['clin_id'] });}, child: Text('rimuovi')),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              onPressed: () async {
+                Navigator.pushNamed(context, '/Comptherpage', arguments: elem);
+              },
+              child: const Text(
+                'Compila',
+                // ${end_date.hour + 2}:${end_date.minute}',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontFamily: 'Gotham',
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            SizedBox(width: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              onPressed: () async {
+                await DbComms.supabase
+                    .from('therapies')
+                    .delete()
+                    .match({'clin_id': elem['clin_id']});
+              },
+              child: const Text(
+                'Rimuovi',
+                // ${end_date.hour + 2}:${end_date.minute}',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontFamily: 'Gotham',
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ]),
         ]))
   ];
 }

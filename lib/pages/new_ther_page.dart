@@ -125,7 +125,7 @@ class _NewTherPage extends State<NewTherPage> {
                             padding: EdgeInsets.only(left: 20),
                             child: ElevatedButton(
                               onPressed: () => _selectDate(context),
-                              child: const Text('Seleziona date terapia'),
+                              child: const Text('Seleziona date'),
                             )),
                       ]),
                       //DatePickerDialog(initialDate: DateTime.now(), firstDate: DateTime.now(), lastDate: {DateTime.now()+365})

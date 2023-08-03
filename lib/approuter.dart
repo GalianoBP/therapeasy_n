@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:therapeasy/access.dart';
+import 'package:therapeasy/pages/Comp_ther_page.dart';
 import 'package:therapeasy/pages/loginPage.dart';
 import 'package:therapeasy/pages/firstBlankPage.dart';
 import 'package:therapeasy/pages/dochomepage.dart';
@@ -26,6 +27,7 @@ class AppRouter {
       '/medlistpage': (context) => MedListPage(),
       '/ther_man_page': (context) => TherManPage(),
       '/newtherpage': (context) => NewTherPage(),
+      '/Comptherpage': (context) => CompTherPage(),
     };
   }
   static Scaffold waitingAnim(BuildContext context){
