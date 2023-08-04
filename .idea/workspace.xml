@@ -9,39 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Aggiunta funzione di rimozione delle terapie. Abbellire il tasto!">
-      <change afterPath="$PROJECT_DIR$/lib/pages/Comp_ther_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/6b6293e860b759d42b1c95e15f917d42/kernel_snapshot.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/f56166be8fc05e1015e6c48beea7da0c/kernel_snapshot.stamp" afterDir="false" />
+    <list default="true" id="81437a43-5515-41f1-8eee-b57715ad488a" name="Changes" comment="Realizzata pagina di compilazione.">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/cacheable/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/kotlin/compileDebugKotlin/local-state/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/e29aedf18e567df5728f6b7ce57d2e97.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/therapeasy.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/flutter_window.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/therapeasy.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/therapeasy.dir/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/approuter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/approuter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/new_ther_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/new_ther_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/ther_managament_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ther_managament_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/Comp_ther_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/Comp_ther_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/Paolo/StudioProjects/Therapeasy/assets/images",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Paolo/StudioProjects/Therapeasy/assets/images&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Paolo\StudioProjects\Therapeasy\assets\images" />
@@ -237,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690822965354</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Realizzata pagina di compilazione.">
+      <created>1691090315352</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691090315352</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +245,8 @@
     <MESSAGE value="Commit con pagina delle terapie del dottore funzionante. Divisione operata tra terapie compilate, resa funzionante barra di ricerca per cognome" />
     <MESSAGE value="Pagina di inserimento nuova terapia realizzata e completamente funzionante. Rivedere come mai quando si torna indietro dall'inserimento non compare la nuova terapia inserita" />
     <MESSAGE value="Aggiunta funzione di rimozione delle terapie. Abbellire il tasto!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta funzione di rimozione delle terapie. Abbellire il tasto!" />
+    <MESSAGE value="Realizzata pagina di compilazione." />
+    <option name="LAST_COMMIT_MESSAGE" value="Realizzata pagina di compilazione." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

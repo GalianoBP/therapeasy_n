@@ -113,8 +113,10 @@ class _CompTherPage extends State<CompTherPage> {
                               "Seleziona un medicinale, puoi cercarlo nella barra sottostante",
                         ),
                       ),
-                      onChanged: (String? src)
-                          {AddSub(med_list[src].toString()); med_list.remove(src);},
+                      onChanged: (String? src) {
+                        AddSub(med_list[src].toString());
+                        med_list.remove(src);
+                      },
                     ),
                     Column(
                       children: <Widget>[
@@ -177,6 +179,7 @@ class _CompTherPage extends State<CompTherPage> {
   }
 
   void AddSub(String medcode) {
+    bool ins=true;
     Map<String, dynamic> tempap = Map();
 
     //der_med[elem[medcode].toString()]=elem;
@@ -185,7 +188,13 @@ class _CompTherPage extends State<CompTherPage> {
     String posology = '';
     String todh = '';
     tempap[medcode] = [ther_id, medcode, tod, posology, todh].toList();
-    sub_med.add(tempap);
+    for (Map<String, dynamic> elem in sub_med){
+      if(elem.keys.first==medcode) {
+        ins = false;
+        break;
+      }}
+
+    if(ins) sub_med.add(tempap);
     print('$sub_med\n');
     setState(() {});
   }
@@ -231,7 +240,7 @@ class _CompTherPage extends State<CompTherPage> {
                         Padding(
                             padding: EdgeInsets.only(right: 8),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Wrap(
                                   direction: Axis.vertical,
@@ -321,6 +330,7 @@ class _CompTherPage extends State<CompTherPage> {
                                   direction: Axis.vertical,
                                   crossAxisAlignment: WrapCrossAlignment.center,
                                   children: [
+                                    Row(children: [
                                     Checkbox(
                                       checkColor: Colors.white,
                                       value: tod,
@@ -351,7 +361,7 @@ class _CompTherPage extends State<CompTherPage> {
                                           print(sub_med);
                                         });
                                       },
-                                    ),
+                                    ),]),
                                     const Text(
                                       'Orario',
                                       style: TextStyle(
@@ -363,7 +373,7 @@ class _CompTherPage extends State<CompTherPage> {
                                     ),
                                   ],
                                 ),
-                                Spacer(),
+                                const SizedBox(width:20),
                                 if (tod && tod_t != null)
                                   Text(
                                     '${tod_t?.hour}:${(tod_t!.minute < 10) ? '0${tod_t!.minute}' : tod_t!.minute}',
@@ -401,6 +411,7 @@ class _CompTherPage extends State<CompTherPage> {
                             return null;
                           },
                         ),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.teal),
@@ -408,23 +419,22 @@ class _CompTherPage extends State<CompTherPage> {
                             if (!(elem[key])[2][0] &&
                                 !(elem[key])[2][1] &&
                                 !(elem[key])[2][2] &&
-                                !(elem[key])[2][3])
-                            {
+                                !(elem[key])[2][3]) {
                               AwesomeDialog(
-                                  context: context,
-                                  btnOkColor: Colors.teal,
-                                  animType: AnimType.scale,
-                                  dialogType: DialogType.error,
-                                  body: const Text(
-                                    'Inserisci almeno una fascia oraria!',
-                                    // ${end_date.hour + 2}:${end_date.minute}',
-                                    style: TextStyle(
-                                        color: Colors.red,
-                                        fontSize: 28,
-                                        fontFamily: 'Gotham',
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.left,
-                                  ),
+                                context: context,
+                                btnOkColor: Colors.teal,
+                                animType: AnimType.scale,
+                                dialogType: DialogType.error,
+                                body: const Text(
+                                  'Inserisci almeno una fascia oraria!',
+                                  // ${end_date.hour + 2}:${end_date.minute}',
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 28,
+                                      fontFamily: 'Gotham',
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.left,
+                                ),
                                 btnOkOnPress: () {},
                               ).show();
                               return;
@@ -445,15 +455,17 @@ class _CompTherPage extends State<CompTherPage> {
                                 'med_cod_fk': (elem[key])[1],
                                 'tod': (elem[key])[2],
                                 'Posology': posologia.text,
-                                'todh': (!tod)?null:'${tod_t!.hour}:${(tod_t!.minute < 10) ? '0${tod_t!.minute}' : tod_t!.minute}:00',
+                                'todh': (!tod)
+                                    ? null
+                                    : '${tod_t!.hour}:${(tod_t!.minute < 10) ? '0${tod_t!.minute}' : tod_t!.minute}:00',
                               });
                               ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                backgroundColor: Colors.blueAccent,
-                                  duration: Duration(seconds: 1),
-                                  content:
-                                  Text('Operazione completata con successo...')),
-                            );
+                                const SnackBar(
+                                    backgroundColor: Colors.blueAccent,
+                                    duration: Duration(seconds: 1),
+                                    content: Text(
+                                        'Operazione completata con successo...')),
+                              );
                             }
                           },
                           child: const Text(
