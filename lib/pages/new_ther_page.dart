@@ -2,9 +2,9 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:therapeasy/Appuser.dart';
+import 'package:therapeasy/app_user.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/approuter.dart';
+import 'package:therapeasy/app_router.dart';
 
 class NewTherPage extends StatefulWidget {
   const NewTherPage({super.key});

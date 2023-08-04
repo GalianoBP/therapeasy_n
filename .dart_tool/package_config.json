@@ -152,6 +152,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///C:/Users/Paolo/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
@@ -530,7 +536,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-07-31T11:34:22.528011Z",
+  "generated": "2023-08-04T15:10:54.407300Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:therapeasy/Appuser.dart';
+import 'package:therapeasy/app_user.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/approuter.dart';
+import 'package:therapeasy/app_router.dart';
 
 class TherManPage extends StatefulWidget {
   const TherManPage({super.key});
@@ -226,7 +226,7 @@ class _TherManPage extends State<TherManPage> {
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     top: 15, bottom: 15, left: 15),
-                                child: Row(
+                                child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: _list_element_maker_ther_man(
                                         (index < ther_list_pending.length)
@@ -237,6 +237,7 @@ class _TherManPage extends State<TherManPage> {
                               )));
                     },
                   ),
+
                 ),
               ])));
         });
@@ -250,6 +251,10 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
   String pat = '${elem['patients']['name']} ${elem['patients']['surname']}';
 
   return [
+    /*Row(mainAxisAlignment: MainAxisAlignment.end, children:[
+      Padding(padding:EdgeInsets.only(right:15), child:
+
+      )]),*/
     SizedBox(
         width: MediaQuery.of(context).orientation == Orientation.landscape
             ? null
@@ -269,6 +274,19 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                       fontFamily: 'Gotham'),
                   text: name),
             ),
+            Spacer(),
+              Padding(padding:EdgeInsets.only(right:15), child:
+            IconButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              onPressed: () async {
+                await DbComms.supabase
+                    .from('therapies')
+                    .delete()
+                    .match({'clin_id': elem['clin_id']});
+              },
+              icon:Icon(Icons.close),
+              color: Colors.white,
+            ),)
           ]),
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -348,9 +366,10 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                     size: 50,
                   )
           ]),
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          SizedBox(height:15),
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
               onPressed: () async {
                 Navigator.pushNamed(context, '/Comptherpage', arguments: elem);
               },
@@ -365,17 +384,15 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                 textAlign: TextAlign.left,
               ),
             ),
-            SizedBox(width: 20),
+            SizedBox(width: 10),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               onPressed: () async {
-                await DbComms.supabase
-                    .from('therapies')
-                    .delete()
-                    .match({'clin_id': elem['clin_id']});
+                Navigator.pushNamed(context, '/modtherpage', arguments: elem);
               },
               child: const Text(
-                'Rimuovi',
+                'Modifica',
                 // ${end_date.hour + 2}:${end_date.minute}',
                 style: TextStyle(
                     color: Colors.white,

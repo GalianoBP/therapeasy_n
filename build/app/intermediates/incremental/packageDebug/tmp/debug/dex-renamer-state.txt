@@ -1,4 +1,4 @@
-#Thu Aug 03 20:53:47 CEST 2023
+#Fri Aug 04 18:59:20 CEST 2023
 base.0=C\:\\Users\\Paolo\\StudioProjects\\Therapeasy\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

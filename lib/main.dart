@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/approuter.dart';
+import 'package:therapeasy/app_router.dart';
 
 void main() async {
   await DbComms.dbAccess();

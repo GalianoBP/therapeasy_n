@@ -1,5 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:therapeasy/Appuser.dart';
+import 'package:therapeasy/app_user.dart';
 
 class DbComms {
   static final supabase = Supabase.instance.client;

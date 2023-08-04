@@ -40,6 +40,7 @@ dependencies:
   awesome_dialog: ^3.1.0
   anim_search_bar: ^2.0.3
   dropdown_search: ^5.0.6
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
