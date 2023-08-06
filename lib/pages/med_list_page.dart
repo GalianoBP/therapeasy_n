@@ -187,7 +187,7 @@ class _MedListPage extends State<MedListPage> {
               overflow: TextOverflow.ellipsis,
               maxLines: 3,
               strutStyle: StrutStyle(fontSize: 40),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               text: TextSpan(
                   style: TextStyle(
                       fontWeight: FontWeight.bold,

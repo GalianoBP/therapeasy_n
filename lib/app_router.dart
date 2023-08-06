@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:therapeasy/access.dart';
+import 'package:therapeasy/pages/ass_page.dart';
 import 'package:therapeasy/pages/comp_ther_page.dart';
 import 'package:therapeasy/pages/login_page.dart';
 import 'package:therapeasy/pages/first_blank_page.dart';
@@ -19,20 +20,22 @@ class AppRouter {
     return {
       '/': (context) => loginPage(),
       '/loginPage': (context) => loginPage(),
-      '/firstBlankPage': (context) => FirstBlankPage(),
-      '/docHomePage': (context) => DocHomePage(),
-      '/patHomePage': (context) => PatHomePage(),
-      '/therplanpage': (context) => TherPlanPage(),
-      '/therpage': (context) => TherPage(),
-      '/medpage': (context) => MedPage(),
-      '/medlistpage': (context) => MedListPage(),
-      '/ther_man_page': (context) => TherManPage(),
-      '/newtherpage': (context) => NewTherPage(),
-      '/Comptherpage': (context) => CompTherPage(),
-      '/modtherpage': (context) => ModTherPage(),
+      '/firstBlankPage': (context) => const FirstBlankPage(),
+      '/docHomePage': (context) => const DocHomePage(),
+      '/patHomePage': (context) => const PatHomePage(),
+      '/therplanpage': (context) => const TherPlanPage(),
+      '/therpage': (context) => const TherPage(),
+      '/medpage': (context) => const MedPage(),
+      '/medlistpage': (context) => const MedListPage(),
+      '/ther_man_page': (context) => const TherManPage(),
+      '/newtherpage': (context) => const NewTherPage(),
+      '/Comptherpage': (context) => const CompTherPage(),
+      '/modtherpage': (context) => const ModTherPage(),
+      '/asspage': (context) => const AssPage(),
     };
   }
-  static Scaffold waitingAnim(BuildContext context){
+
+  static Scaffold waitingAnim(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -62,17 +65,17 @@ class AppRouter {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  RichText(
-                      text: const TextSpan(
-                          text: "Therapeasy",
-                          style: TextStyle(
-                              color: Colors.teal,
-                              fontSize: 40,
-                              fontFamily: 'VeganStyle'))),
-                  Padding(
-                      padding: const EdgeInsets.only(top: 32.0),
-                      child: LoadingAnimationWidget.inkDrop(
-                          color: Colors.teal, size: 50))
-                ])));
+              RichText(
+                  text: const TextSpan(
+                      text: "Therapeasy",
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 40,
+                          fontFamily: 'VeganStyle'))),
+              Padding(
+                  padding: const EdgeInsets.only(top: 32.0),
+                  child: LoadingAnimationWidget.inkDrop(
+                      color: Colors.teal, size: 50))
+            ])));
   }
 }

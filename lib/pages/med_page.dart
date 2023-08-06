@@ -39,10 +39,10 @@ class _MedPage extends State<MedPage> {
     ).on(
       RealtimeListenTypes.postgresChanges,
       ChannelFilter(
-          event: 'DELETE',
-          schema: 'public',
-          table: 'Derivare_NN',
-      ),// filter: 'therapies(pat_id_fk)=eq.${Appuser.userID.toString()}'),
+        event: 'DELETE',
+        schema: 'public',
+        table: 'Derivare_NN',
+      ), // filter: 'therapies(pat_id_fk)=eq.${Appuser.userID.toString()}'),
       (payload, [ref]) async {
         await Refresh();
       },
@@ -55,8 +55,7 @@ class _MedPage extends State<MedPage> {
     medicines.clear();
     for (var elem in await DbComms.supabase
         .from('medicine_view')
-        .select(
-            '*')
+        .select('*')
         .eq('pat_id_fk', Appuser.userID)
         .order('medicine', ascending: true)) {
       medicines.add(elem as Map<String, dynamic>);
@@ -111,7 +110,10 @@ class _MedPage extends State<MedPage> {
                 child: Container(
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Colors.blue.shade200, Colors.blue.shade300],
+                            colors: [
+                              Colors.greenAccent.shade100,
+                              Colors.greenAccent.shade200
+                            ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight),
                         borderRadius: const BorderRadius.horizontal(
@@ -119,11 +121,11 @@ class _MedPage extends State<MedPage> {
                             left: Radius.circular(15))),
                     child: Padding(
                       padding:
-                      const EdgeInsets.only(top: 15, bottom: 15, left: 15),
+                          const EdgeInsets.only(top: 15, bottom: 15, left: 15),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children:
-                          _list_element_maker_therapies(medicines.elementAt(index))),
+                          children: _list_element_maker_therapies(
+                              medicines.elementAt(index))),
                     )));
           },
         ));
@@ -133,7 +135,7 @@ class _MedPage extends State<MedPage> {
     String name = elem['medicine'];
     String type = elem['type'];
     String ac_princ = elem['active_principle'];
-    String doc ='${elem['doc_name']} ${elem['doc_surname']}';
+    String doc = '${elem['doc_name']} ${elem['doc_surname']}';
     String spec = '${elem['spec']}';
     return [
       SizedBox(
@@ -143,24 +145,42 @@ class _MedPage extends State<MedPage> {
           child: Column(children: [
             RichText(
               overflow: TextOverflow.ellipsis,
+              maxLines: 3,
               strutStyle: StrutStyle(fontSize: 40),
+              textAlign: TextAlign.left,
               text: TextSpan(
-                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amber.shade800,
+                      fontSize: 25,
+                      fontFamily: 'Gotham'),
                   text: name),
             ),
-            Text(
-              'Tipologia: $type',
-              style: const TextStyle(
-                fontSize: 28,
-              ),
+            const Text(
+              'Principio attivo:',
+              style: TextStyle(
+                  color: Colors.indigo,
+                  fontSize: 28,
+                  fontFamily: 'Gotham',
+                  fontWeight: FontWeight.bold),
             ),
             Text(
-              'Principio attivo: $ac_princ',
+              '$ac_princ',
+              style: const TextStyle(fontSize: 28, fontFamily: 'Gotham'),
+            ),
+            const Text(
+              'Tipologia:',
               // ${end_date.hour + 2}:${end_date.minute}',
-              style: const TextStyle(
-                fontSize: 28,
-              ),
-            )
+              style: TextStyle(
+                  color: Colors.indigo,
+                  fontSize: 28,
+                  fontFamily: 'Gotham',
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              '$type',
+              style: const TextStyle(fontSize: 28, fontFamily: 'Gotham'),
+            ),
           ])),
       Flexible(
           fit: FlexFit.tight,

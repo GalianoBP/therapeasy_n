@@ -1,8 +1,6 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/access.dart';
 
 late Map<String, String> med_list = Map();
@@ -180,7 +178,6 @@ class _ModTherPage extends State<ModTherPage> {
     final TextEditingController posologia =
         TextEditingController(text: elem['Posology'].toString());
     final _formKey = GlobalKey<FormState>();
-    String key = elem.keys.first;
     bool br = elem['tod'][0];
     bool lu = elem['tod'][1];
     bool di = elem['tod'][2];

@@ -1,10 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:therapeasy/app_user.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/app_router.dart';
 
 class TherManPage extends StatefulWidget {
   const TherManPage({super.key});
@@ -237,7 +235,6 @@ class _TherManPage extends State<TherManPage> {
                               )));
                     },
                   ),
-
                 ),
               ])));
         });
@@ -275,18 +272,20 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                   text: name),
             ),
             Spacer(),
-              Padding(padding:EdgeInsets.only(right:15), child:
-            IconButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              onPressed: () async {
-                await DbComms.supabase
-                    .from('therapies')
-                    .delete()
-                    .match({'clin_id': elem['clin_id']});
-              },
-              icon:Icon(Icons.close),
-              color: Colors.white,
-            ),)
+            Padding(
+              padding: EdgeInsets.only(right: 15),
+              child: IconButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                onPressed: () async {
+                  await DbComms.supabase
+                      .from('therapies')
+                      .delete()
+                      .match({'clin_id': elem['clin_id']});
+                },
+                icon: Icon(Icons.close),
+                color: Colors.white,
+              ),
+            )
           ]),
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -366,43 +365,66 @@ List<Widget> _list_element_maker_ther_man(Map<String, dynamic> elem, context) {
                     size: 50,
                   )
           ]),
-          SizedBox(height:15),
-          Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-              onPressed: () async {
-                Navigator.pushNamed(context, '/Comptherpage', arguments: elem);
-              },
-              child: const Text(
-                'Compila',
-                // ${end_date.hour + 2}:${end_date.minute}',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontFamily: 'Gotham',
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.left,
+          SizedBox(height: 15),
+          Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                onPressed: () async {
+                  Navigator.pushNamed(context, '/Comptherpage',
+                      arguments: elem);
+                },
+                child: const Text(
+                  'Compila',
+                  // ${end_date.hour + 2}:${end_date.minute}',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontFamily: 'Gotham',
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
+                ),
               ),
-            ),
-            SizedBox(width: 10),
-            ElevatedButton(
-              style:
-                  ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
-              onPressed: () async {
-                Navigator.pushNamed(context, '/modtherpage', arguments: elem);
-              },
-              child: const Text(
-                'Modifica',
-                // ${end_date.hour + 2}:${end_date.minute}',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontFamily: 'Gotham',
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.left,
+              SizedBox(width: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueAccent),
+                onPressed: () async {
+                  Navigator.pushNamed(context, '/modtherpage', arguments: elem);
+                },
+                child: const Text(
+                  'Modifica',
+                  // ${end_date.hour + 2}:${end_date.minute}',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontFamily: 'Gotham',
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
+                ),
               ),
-            ),
-          ]),
+            ]),
+            SizedBox(height: 10,),
+            Row(children: [
+              const SizedBox(width:15),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                onPressed: () async {
+                  Navigator.pushNamed(context, '/asspage', arguments: elem);
+                },
+                child: const Text(
+                  'Mancate assunzioni',
+                  // ${end_date.hour + 2}:${end_date.minute}',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontFamily: 'Gotham',
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+            ])
+          ])
         ]))
   ];
 }

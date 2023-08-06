@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:therapeasy/access.dart';
-import 'package:therapeasy/app_router.dart';
-import 'package:therapeasy/pages/first_blank_page.dart';
 
 class FirstBlankPage extends StatefulWidget {
   const FirstBlankPage({super.key});

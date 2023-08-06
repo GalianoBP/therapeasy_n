@@ -5,7 +5,7 @@ class Appuser {
   static late String name;
   static late String surname;
   static late int role;
-  static late List<Map<String, dynamic>> ther=[];
+  static  List<Map<String, dynamic>> ther=[];
   static List<Map<String, dynamic>> pending_med = [];
   static late final medrole;
   static late List<dynamic> terapie;

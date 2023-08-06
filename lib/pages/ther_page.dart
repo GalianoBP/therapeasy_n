@@ -95,12 +95,15 @@ class _TherPage extends State<TherPage> {
                 child: Container(
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: (therapies[index]['state'] != 'true')
+                            colors: (therapies[index]['state'] != true)
                                 ? [
-                                    Colors.yellow.shade200,
-                                    Colors.yellow.shade400
-                                  ]
-                                : [Colors.blue.shade200, Colors.blue.shade300],
+                              Colors.orangeAccent.shade100,
+                              Colors.orange.shade200
+                            ]
+                                : [
+                                    Colors.greenAccent.shade100,
+                                    Colors.greenAccent.shade200
+                                  ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight),
                         borderRadius: const BorderRadius.horizontal(
@@ -139,7 +142,6 @@ class _TherPage extends State<TherPage> {
   List<Widget> _list_element_maker_therapies(Map<String, dynamic> elem) {
     DateTime st_date = DateTime.parse(elem['start_date']);
     DateTime end_date = DateTime.parse(elem['end_date']);
-    bool state = elem['state'], compiled = elem['compiled'];
     String ther_name = elem['name'];
 
     return [
@@ -150,25 +152,53 @@ class _TherPage extends State<TherPage> {
           child: Column(children: [
             RichText(
               overflow: TextOverflow.ellipsis,
+              maxLines: 3,
               strutStyle: StrutStyle(fontSize: 40),
+              textAlign: TextAlign.left,
               text: TextSpan(
-                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.amber.shade800,
+                      fontSize: 25,
+                      fontFamily: 'Gotham'),
                   text: ther_name),
             ),
-            Text(
-              'I: ${st_date.day}-${st_date.month}-${st_date.year}',
-              //${st_date.hour + 2}:${st_date.minute}',
-              style: const TextStyle(
-                fontSize: 28,
-              ),
+            Row(
+              children: <Widget>[
+                const Text(
+                  'Data d\'inizio: ',
+                  style: TextStyle(
+                      color: Colors.indigo,
+                      fontSize: 28,
+                      fontFamily: 'Gotham',
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.left,
+                ),
+                Text(
+                  '${st_date.day}-${st_date.month}-${st_date.year}',
+                  style:
+                  const TextStyle(fontSize: 28, fontFamily: 'Gotham'),
+                  textAlign: TextAlign.left,
+                ),
+              ],
             ),
-            Text(
-              'F: ${end_date.day}-${end_date.month}-${end_date.year}',
-              // ${end_date.hour + 2}:${end_date.minute}',
-              style: const TextStyle(
-                fontSize: 28,
+            Row(children: <Widget>[
+              const Text(
+                'Data di fine: ',
+                // ${end_date.hour + 2}:${end_date.minute}',
+                style: TextStyle(
+                    color: Colors.indigo,
+                    fontSize: 28,
+                    fontFamily: 'Gotham',
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
               ),
-            )
+              Text(
+                '${end_date.day}-${end_date.month}-${end_date.year}',
+                style: const TextStyle(fontSize: 28, fontFamily: 'Gotham'),
+                textAlign: TextAlign.left,
+              ),
+            ]),
           ])),
       Flexible(
           fit: FlexFit.tight,
@@ -179,72 +209,73 @@ class _TherPage extends State<TherPage> {
                 iconSize: 75,
                 onPressed: () {
                   AwesomeDialog(
-                      context: context,
-                      btnOkColor: Colors.teal,
-                      animType: AnimType.scale,
-                      dialogType: DialogType.info,
-                      body: Flexible(
-                          child: Column(children: <Widget>[
-                        RichText(
-                            text: const TextSpan(
-                                text: "Therapeasy",
-                                style: TextStyle(
-                                    color: Colors.teal,
-                                    fontSize: 40,
-                                    fontFamily: 'VeganStyle'))),
-                        Padding(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Row(
-                              children: <Widget>[
-                                RichText(
-                                    text: const TextSpan(
-                                        text: "Medico: ",
-                                        style: TextStyle(
-                                            color: Colors.teal,
-                                            fontSize: 20,
+                    context: context,
+                    btnOkColor: Colors.teal,
+                    animType: AnimType.scale,
+                    dialogType: DialogType.info,
+                    body: Flexible(
+                        child: Column(children: <Widget>[
+                      RichText(
+                          text: const TextSpan(
+                              text: "Therapeasy",
+                              style: TextStyle(
+                                  color: Colors.teal,
+                                  fontSize: 40,
+                                  fontFamily: 'VeganStyle'))),
+                      Padding(
+                          padding: EdgeInsets.only(top: 20),
+                          child: Row(
+                            children: <Widget>[
+                              RichText(
+                                  text: const TextSpan(
+                                      text: "Medico: ",
+                                      style: TextStyle(
+                                          color: Colors.teal,
+                                          fontSize: 20,
+                                          fontFamily: 'Gotham'))),
+                              Flexible(
+                                child: RichText(
+                                    maxLines: 3,
+                                    softWrap: true,
+                                    text: TextSpan(
+                                        text:
+                                            ' ${elem['doctors']['name']} ${elem['doctors']['surname']}',
+                                        style: const TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            color: Colors.black,
+                                            fontSize: 16,
                                             fontFamily: 'Gotham'))),
-                                Flexible(
-                                  child: RichText(
-                                      maxLines: 3,
-                                      softWrap: true,
-                                      text: TextSpan(
-                                          text:
-                                              ' ${elem['doctors']['name']} ${elem['doctors']['surname']}',
-                                          style: const TextStyle(
-                                              overflow: TextOverflow.ellipsis,
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'Gotham'))),
-                                )
-                              ],
-                            )),
-                        Padding(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Row(
-                              children: <Widget>[
-                                RichText(
-                                    text: const TextSpan(
-                                        text: "Specializzazione: ",
-                                        style: TextStyle(
-                                            color: Colors.teal,
-                                            fontSize: 20,
+                              )
+                            ],
+                          )),
+                      Padding(
+                          padding: EdgeInsets.only(top: 20),
+                          child: Row(
+                            children: <Widget>[
+                              RichText(
+                                  text: const TextSpan(
+                                      text: "Specializzazione: ",
+                                      style: TextStyle(
+                                          color: Colors.teal,
+                                          fontSize: 20,
+                                          fontFamily: 'Gotham'))),
+                              Flexible(
+                                child: RichText(
+                                    maxLines: 3,
+                                    softWrap: true,
+                                    text: TextSpan(
+                                        text: '${elem['doctors']['med_spec']}',
+                                        style: const TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            color: Colors.black,
+                                            fontSize: 16,
                                             fontFamily: 'Gotham'))),
-                                Flexible(
-                                  child: RichText(
-                                      maxLines: 3,
-                                      softWrap: true,
-                                      text: TextSpan(
-                                          text:
-                                              '${elem['doctors']['med_spec']}',
-                                          style: const TextStyle(
-                                              overflow: TextOverflow.ellipsis,
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                              fontFamily: 'Gotham'))),
-                                )
-                              ],
-                            )),
-                      ])),btnOkOnPress: () {},).show();
+                              )
+                            ],
+                          )),
+                    ])),
+                    btnOkOnPress: () {},
+                  ).show();
                 })
           ]))
     ];
